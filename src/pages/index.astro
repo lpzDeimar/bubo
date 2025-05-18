@@ -104,164 +104,165 @@ const servicios = [
 ---
 
 <Layout>
-	<section class="banner" id="nosotros">
-		<section class="banner-text">
-			<h2>
-				Bienvenida Somos bubo
-			</h2>
-			<p class="banner-text-subtitle">
-				En bubo somos más que un esmalte. 
-			</p>
-			<p class="banner-text-p">
-				Somos un equipo de manicuristas expertas en belleza que te ofrecemos productos y servicios de alta calidad a precios justos para que te sientas bella y segura. 
-			</p>
-		</section>
-		<section class="banner-image">
-			<img src={Manicurista.src} alt="Manicurista" width={600} />
-		</section>
-	</section>
-
-	<section class="tecnica-manicura">
-		<section class="tecnica-manicura-image">
-			<img src={Mano.src} alt="Manicurista" width={600} />
-		</section>
-		<section class="tecnica-manicura-text">
-		<h2>
-			Manicura y pedicura
-		</h2>
-		<p>
-			En bubo, nos enorgullece ofrecer servicios de manicure y pedicure en seco, una técnica innovadora y segura que elimina el riesgo de hongos y otras infecciones comunes en los métodos tradicionales. 
-		</p>
-		<p>
-			La seguridad y salud de nuestros clientes es nuestra prioridad. Por eso, seguimos rigurosos protocolos de desinfección y esterilización de todos nuestros instrumentos, garantizando un servicio impecable en instalaciones meticulosamente mantenidas. 
-		</p>
-		<p>
-			Nuestro equipo de expertas manicuristas cuenta con más de 6 años de experiencia en el cuidado y embellecimiento de manos y pies. Su dedicación y profesionalismo aseguran resultados excepcionales en cada visita. 
-		</p>
-		</section>
-		
-	</section>
-
-	<section class="servicios" id="servicios">
-		<h2 class="servicios-title">
-			Servicios
-		</h2>
-		<p class="servicios-subtitle">
-			Ofrecemos una amplia gama de servicios
-		</p>
-		<section class="servicios-lista">
-			<article>
-				<h3>Manicura</h3>
-			<div class="swiper swiper-manicura">
-				<div class="swiper-wrapper">
-					{servicios
-						.filter(servicio => servicio.tipo === 'Manicura')
-						.map(servicio => (
-							<div class="swiper-slide">
-								<Card nombre={servicio.nombre} descripcion={servicio.descripcion} precio={servicio.precio} />
-							</div>
-					))}
-				</div>
-				<div class="swiper-pagination"></div>
+	<main>
+		<!-- Hero Section -->
+		<section class="banner" id="nosotros" aria-label="Sobre Nosotros">
+			<div class="banner-text">
+				<h1>
+					Bienvenida a Bubo
+				</h1>
+				<p class="banner-text-subtitle">
+					En bubo somos más que un esmalte
+				</p>
+				<p class="banner-text-p">
+					Somos un equipo de manicuristas expertas en belleza que te ofrecemos productos y servicios de alta calidad a precios justos para que te sientas bella y segura. 
+				</p>
 			</div>
+			<div class="banner-image">
+				<img src={Manicurista.src} alt="Manicurista profesional en madrid cundinamarca" width="600" height="400" loading="eager" />
+			</div>
+		</section>
+
+		<!-- Técnica Section -->
+		<section class="tecnica-manicura" aria-label="Nuestra Técnica">
+			<div class="tecnica-manicura-image">
+				<img src={Mano.src} alt="Ejemplo de trabajo de manicura realizado en bubo" width="600" height="428" loading="lazy" />
+			</div>
+			<article class="tecnica-manicura-text">
+				<h2>Manicura y pedicura en seco</h2>
+				<p>
+					En bubo, nos enorgullece ofrecer servicios de manicure y pedicure en seco, una técnica innovadora y segura que elimina el riesgo de hongos y otras infecciones comunes en los métodos tradicionales. 
+				</p>
+				<p>
+					La seguridad y salud de nuestros clientes es nuestra prioridad. Por eso, seguimos rigurosos protocolos de desinfección y esterilización de todos nuestros instrumentos, garantizando un servicio impecable en instalaciones meticulosamente mantenidas. 
+				</p>
+				<p>
+					Nuestro equipo de expertas manicuristas cuenta con más de 6 años de experiencia en el cuidado y embellecimiento de manos y pies. Su dedicación y profesionalismo aseguran resultados excepcionales en cada visita. 
+				</p>
 			</article>
-			<article>
-				<h3>Pedicura</h3>
-				<div class="swiper swiper-pedicura">
-					<div class="swiper-wrapper">
-						{servicios
-							.filter(servicio => servicio.tipo === 'Pedicura')
-							.map(servicio => (
-								<div class="swiper-slide">
-									<Card nombre={servicio.nombre} descripcion={servicio.descripcion} precio={servicio.precio} />
-								</div>
-						))}
+		</section>
+
+		<!-- Servicios Section -->
+		<section class="servicios" id="servicios" aria-label="Nuestros Servicios">
+			<h2 class="servicios-title">Servicios Profesionales de Belleza</h2>
+			<p class="servicios-subtitle">
+				Ofrecemos una amplia gama de servicios especializados
+			</p>
+			<div class="servicios-lista">
+				<article aria-label="Servicios de Manicura">
+					<h3>Servicios de Manicura</h3>
+					<div class="swiper swiper-manicura">
+						<div class="swiper-wrapper">
+							{servicios
+								.filter(servicio => servicio.tipo === 'Manicura')
+								.map(servicio => (
+									<div class="swiper-slide">
+										<Card nombre={servicio.nombre} descripcion={servicio.descripcion} precio={servicio.precio} />
+									</div>
+							))}
+						</div>
+						<div class="swiper-pagination" role="navigation" aria-label="Navegación de servicios de manicura"></div>
 					</div>
-					<div class="swiper-pagination"></div>
-				</div>
-			</article>
-			
+				</article>
 
-			<article>
-			<h3>Pestañas</h3>
-			<div class="swiper swiper-pestanas">
-				<div class="swiper-wrapper">
-					{servicios
-						.filter(servicio => servicio.tipo === 'Pestañas')
-						.map(servicio => (
-							<div class="swiper-slide">
-								<Card nombre={servicio.nombre} descripcion={servicio.descripcion} precio={servicio.precio} />
-							</div>
-					))}
-				</div>
-				<div class="swiper-pagination"></div>
+				<article aria-label="Servicios de Pedicura">
+					<h3>Servicios de Pedicura</h3>
+					<div class="swiper swiper-pedicura">
+						<div class="swiper-wrapper">
+							{servicios
+								.filter(servicio => servicio.tipo === 'Pedicura')
+								.map(servicio => (
+									<div class="swiper-slide">
+										<Card nombre={servicio.nombre} descripcion={servicio.descripcion} precio={servicio.precio} />
+									</div>
+							))}
+						</div>
+						<div class="swiper-pagination" role="navigation" aria-label="Navegación de servicios de pedicura"></div>
+					</div>
+				</article>
+
+				<article aria-label="Servicios de Pestañas">
+					<h3>Servicios de Pestañas</h3>
+					<div class="swiper swiper-pestanas">
+						<div class="swiper-wrapper">
+							{servicios
+								.filter(servicio => servicio.tipo === 'Pestañas')
+								.map(servicio => (
+									<div class="swiper-slide">
+										<Card nombre={servicio.nombre} descripcion={servicio.descripcion} precio={servicio.precio} />
+									</div>
+							))}
+						</div>
+						<div class="swiper-pagination" role="navigation" aria-label="Navegación de servicios de pestañas"></div>
+					</div>
+				</article>
+
+				<article aria-label="Servicios de Cabello">
+					<h3>Servicios de Cabello</h3>
+					<div class="swiper swiper-cabello">
+						<div class="swiper-wrapper">
+							{servicios
+								.filter(servicio => servicio.tipo === 'Cabello')
+								.map(servicio => (
+									<div class="swiper-slide">
+										<Card nombre={servicio.nombre} descripcion={servicio.descripcion} precio={servicio.precio} />
+									</div>
+							))}
+						</div>
+						<div class="swiper-pagination" role="navigation" aria-label="Navegación de servicios de cabello"></div>
+					</div>
+				</article>
 			</div>
-			</article>
-			<article>
-			<h3>Cabello</h3>
-			<div class="swiper swiper-cabello">
-				<div class="swiper-wrapper">
-					{servicios
-						.filter(servicio => servicio.tipo === 'Cabello')
-						.map(servicio => (
-							<div class="swiper-slide">
-								<Card nombre={servicio.nombre} descripcion={servicio.descripcion} precio={servicio.precio} />
-							</div>
-					))}
-				</div>
-				<div class="swiper-pagination"></div>
-			</div>
-			</article>
 		</section>
-	</section>
 
-	<section class="contacto" id="contacto">
-		<h2>
-			Contactonos
-		</h2>
-		<p>
-			Whatsapp o Llamada: <a href="https://wa.me/573185164144" target="_blank">318 516 4144</a>
-		</p>
-		<p>
-			Instagram: <a href="https://www.instagram.com/bubo.plus" target="_blank">@bubo.plus</a>
-		</p>
-	</section>
+		<!-- Contacto Section -->
+		<section class="contacto" id="contacto" aria-label="Información de Contacto">
+			<h2>Contáctanos</h2>
+			<address>
+				<p>
+					WhatsApp o Llamada: <a href="https://wa.me/573185164144" target="_blank" rel="noopener noreferrer">318 516 4144</a>
+				</p>
+				<p>
+					Instagram: <a href="https://www.instagram.com/bubo.plus" target="_blank" rel="noopener noreferrer">@bubo.plus</a>
+				</p>
+			</address>
+		</section>
 
-	<section class="ubicacion" id="ubicacion">
-		<div class="ubicacion-text">
-			<h4>
-				Ubicación
-			</h4>
-			<h1>
-				Manicura en Madrid Cundinamarca
-			</h1>
-			<p>
-				Estamos ubicados en la carrera 21 # 1-70, en Madrid, Colombia.
-			</p>
-			<p>
-				Estamos abiertos todos los días de 9:30 a 19:00.
-			</p>
-		</div>
-	  <!-- Mapa con iframe de Google Maps -->
-	  <div class="mapa">
-		<iframe 
-		  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1990.5358770403474!2d-74.27741445511796!3d4.7323328865432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f79000dc37b9f%3A0xf6e5ad87ef968026!2sBubo!5e0!3m2!1ses!2sco!4v1712894234813!5m2!1ses!2sco" 
-		  width="100%" 
-		  height="400" 
-		  style="border:0;" 
-		  allowfullscreen=""
-		  loading="lazy" 
-		  referrerpolicy="no-referrer-when-downgrade"
-		  class="w-full h-[400px]">
-		</iframe>
-	  </div>
-	</section>
-    <footer class="footer">
-		<p>
-			Copyright © {new Date().getFullYear()} bubo. Todos los derechos reservados.
-		</p>
-    </footer>
+		<!-- Ubicación Section -->
+		<section class="ubicacion" id="ubicacion" aria-label="Nuestra Ubicación">
+			<article class="ubicacion-text">
+				<h2>Ubicación</h2>
+				<p class="ubicacion-subtitle">Manicura en Madrid, Cundinamarca</p>
+				<address>
+					<p>
+						Estamos ubicados en la carrera 21 # 1-70, en Madrid, Colombia.
+					</p>
+					<p>
+						<time>Horario: todos los días de 9:30 a 19:00</time>
+					</p>
+				</address>
+			</article>
+			<div class="mapa" aria-label="Mapa de ubicación">
+				<iframe 
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1990.5358770403474!2d-74.27741445511796!3d4.7323328865432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f79000dc37b9f%3A0xf6e5ad87ef968026!2sBubo!5e0!3m2!1ses!2sco!4v1712894234813!5m2!1ses!2sco" 
+					width="100%" 
+					height="400" 
+					style="border:0;" 
+					allowfullscreen=""
+					loading="lazy" 
+					referrerpolicy="no-referrer-when-downgrade"
+					title="Ubicación de Bubo en Google Maps"
+					aria-label="Mapa interactivo mostrando la ubicación de Bubo">
+				</iframe>
+			</div>
+		</section>
+	</main>
 
+	<footer class="footer">
+		<p>
+			Copyright © <time datetime={new Date().getFullYear().toString()}>{new Date().getFullYear()}</time> Bubo. Todos los derechos reservados.
+		</p>
+	</footer>
 </Layout>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
