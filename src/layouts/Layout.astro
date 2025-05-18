@@ -1,3 +1,6 @@
+---
+import Header from '../components/Header.astro';
+---
 <!doctype html>
 <html lang="en">
 	<head>
@@ -6,17 +9,51 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&display=swap" rel="stylesheet">
+		<meta name="description" content="Servicio profesional de manicure y uñas en Madrid, Cundinamarca. Uñas acrílicas, semipermanentes y más. ¡Reserva ahora!">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="manicura, uñas acrílicas, uñas semipermanentes, pedicura, salon de uñas, [tu ciudad]">
+		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<title>Manicura Profesional en Madrid | Uñas Acrílicas, Semipermanentes y Más | Bubo</title>
 	</head>
 	<body>
+		<Header />
 		<slot />
 	</body>
 </html>
 
+
+<style is:global>
+	html{
+		scroll-behavior: smooth;
+	}
+	body {
+		background-color: #f5f5f5;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	* ::selection {
+	background: #2872339e; /* Rojo en lugar del azul predeterminado */
+	color: white;
+	}
+</style>
+
 <style>
 	html,
 	body {
-		margin: 0;
 		width: 100%;
 		height: 100%;
+		/* max-width: 1100px; */
+		margin: 0 auto;
+		font-family: "Poiret One", sans-serif;
+		font-weight: 400;
+		font-style: normal;
 	}
 </style>
+

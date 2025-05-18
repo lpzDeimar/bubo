@@ -1,0 +1,44 @@
+---
+const { nombre, descripcion, precio } = Astro.props;
+---
+
+<article class="servicio-item">
+    <h3 class="servicio-nombre">{nombre}</h3>
+    <p class="servicio-descripcion">{descripcion}</p>
+    <p class="servicio-precio">{precio}</p>
+</article>
+
+<style>
+    .servicio-item {
+        padding: 1.5rem;
+        border-radius: 10px;
+        background-color: #ffffff;
+    }
+
+    .servicio-nombre {
+        color: #287233;
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .servicio-descripcion {
+        color: #5a5a5a;
+        margin-bottom: 1rem;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .servicio-precio {
+        text-align: right;
+        font-size: 1.6rem;
+        color: #287233;
+        font-weight: normal;
+        font-family: "Montserrat", sans-serif;
+    &::before {
+        content: '$';
+    }
+    &::after {
+        content: ' COP';
+        font-size: 0.6em;
+    }
+    }
+</style>
