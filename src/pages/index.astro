@@ -7,20 +7,38 @@ const servicios = [
 	{
 		nombre: 'Uñas Poligel',
 		descripcion: 'Técnica de esculpido con Poligel que combina lo mejor del acrílico y el gel, ofreciendo uñas duraderas y resistentes. Precio único sin importar largo o diseño',
-		precio: 85000,
+		precio: 90000,
 		tipo: 'Manicura'
 	},
 	{
 		nombre: 'Uñas Acrílicas',
 		descripcion: 'Extensiones de uñas creadas con acrílico de alta calidad para un look duradero y personalizado. Precio único sin importar largo o diseño',
-		precio: 85000,
+		precio: 90000,
 		tipo: 'Manicura'
+	},
+	{
+		nombre: "Mantenimiento de uñas Acrílicas",
+		descripcion: "Mantenimiento de uñas acrílicas con esmaltado semipermanente para mayor duración y resistencia",
+		precio: 70000,
+		tipo: "Manicura"
+	},
+	{
+		nombre: "Mantenimiento de uñas Poligel",
+		descripcion: "Mantenimiento de uñas poligel con esmaltado semipermanente para mayor duración y resistencia",
+		precio: 70000,
+		tipo: "Manicura"
 	},
 	{
 		nombre: 'Uñas PressOn',
 		descripcion: 'Uñas postizas personalizadas de alta calidad, fáciles de aplicar para un largo y diseño personalizado',
-		precio: 65000,
+		precio: 70000,
 		tipo: 'Manicura'
+	},
+	{
+		nombre: 'Mantenimiento de uñas PressOn',
+		descripcion: 'Mantenimiento de uñas press on con esmaltado semipermanente para mayor duración y resistencia',
+		precio: 50000,
+		tipo: "Manicura"
 	},
 	{
 		nombre: 'Dipping',
@@ -31,25 +49,25 @@ const servicios = [
 	{
 		nombre: 'Uñas Semipermanente',
 		descripcion: 'Esmaltado de larga duración que mantiene tus uñas perfectas hasta por 3 semanas. Incluye diversos diseños sin costo adicional',
-		precio: 29000,
+		precio: 35000,
 		tipo: 'Manicura'
 	},
 	{
 		nombre: 'Uñas Tradicionales',
 		descripcion: 'Manicura clásica con esmaltado regular de gel polish para un acabado brillante y cuidado profesional',
-		precio: 15000,
+		precio: 18000,
 		tipo: 'Manicura'
 	},
 	{
 		nombre: 'Pedicura Tradicional',
 		descripcion: 'Pedicura completa con esmaltado regular, cuidado de cutículas y exfoliación para pies suaves',
-		precio: 20000,
+		precio: 25000,
 		tipo: 'Pedicura'
 	},
 	{
 		nombre: 'Pedicura Semipermanente',
 		descripcion: 'Pedicura profesional con esmaltado semipermanente de larga duración y cuidado intensivo para tus pies',
-		precio: 33000,
+		precio: 35000,
 		tipo: 'Pedicura'
 	},
 	{
@@ -97,7 +115,7 @@ const servicios = [
 	{
 		nombre: 'Despunte',
 		descripcion: 'Corte preciso de las puntas para eliminar daños y mantener el cabello saludable sin alterar la longitud',
-		precio: 6000,
+		precio: 10000,
 		tipo: 'Cabello'
 	}
 ]
@@ -117,13 +135,13 @@ const servicios = [
 			</p>
 		</section>
 		<section class="banner-image">
-			<img src={Manicurista.src} alt="Manicurista" width={600} />
+			<img src={Manicurista.src} alt="Manicura profesional en Madrid, Cundinamarca" width={600} loading="eager" decoding="async" fetchpriority="high" />
 		</section>
 	</section>
 
 	<section class="tecnica-manicura">
 		<section class="tecnica-manicura-image">
-			<img src={Mano.src} alt="Manicurista" width={600} />
+			<img src={Mano.src} alt="Manicura en seco en Madrid, Cundinamarca" width={600} loading="lazy" decoding="async" />
 		</section>
 		<section class="tecnica-manicura-text">
 		<h2>
@@ -147,7 +165,7 @@ const servicios = [
 			Servicios
 		</h2>
 		<p class="servicios-subtitle">
-			Ofrecemos una amplia gama de servicios
+			Ofrecemos una amplia gama de servicios de uñas en Madrid, Cundinamarca: uñas acrílicas, poligel, press on, semipermanente, pedicura tradicional y semipermanente, además de mantenimiento. Nuestra técnica en seco reduce riesgos y mejora la durabilidad del esmaltado.
 		</p>
 		<section class="servicios-lista">
 			<article>
@@ -217,13 +235,16 @@ const servicios = [
 
 	<section class="contacto" id="contacto">
 		<h2>
-			Contactonos
+			Contáctanos
 		</h2>
 		<p>
-			Whatsapp o Llamada: <a href="https://wa.me/573185164144" target="_blank">318 516 4144</a>
+			WhatsApp o llamada: <a href="https://wa.me/573185164144" target="_blank" rel="nofollow noopener">318 516 4144</a>
 		</p>
 		<p>
 			Instagram: <a href="https://www.instagram.com/bubo.plus" target="_blank">@bubo.plus</a>
+		</p>
+		<p>
+			Atendemos Madrid y municipios cercanos como Funza y Mosquera. Reserva tu cita y pregunta por promociones de manicure y pedicure.
 		</p>
 	</section>
 
@@ -236,10 +257,10 @@ const servicios = [
 				Spa de uñas en Madrid Cundinamarca
 			</h1>
 			<p>
-				Estamos ubicados en la carrera 21 # 1-70, en Madrid, Colombia.
+				Estamos en la Carrera 21 # 1-70, Madrid, Cundinamarca. Salón de uñas cerca de ti para servicios de manicura y pedicura profesional.
 			</p>
 			<p>
-				Estamos abiertos todos los días de 9:30 a 19:00.
+				Estamos abiertos todos los días de 10:00 a 20:00.
 			</p>
 		</div>
 	  <!-- Mapa con iframe de Google Maps -->
@@ -265,7 +286,41 @@ const servicios = [
 </Layout>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+<!-- FAQ SEO Section -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta una manicura semipermanente en Madrid, Cundinamarca?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En bubo el servicio de uñas semipermanentes cuesta desde $35.000 COP."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hacen uñas acrílicas y poligel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, realizamos uñas acrílicas y poligel desde $90.000 COP, además de mantenimiento desde $70.000 COP."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Dónde están ubicados?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Estamos en la Carrera 21 # 1-70, Madrid, Cundinamarca. Atendemos también a clientes de Funza y Mosquera."
+      }
+    }
+  ]
+}
+</script>
 
 <script>
 	declare const Swiper: any;
@@ -432,12 +487,13 @@ const servicios = [
 	}
 
 	.servicios {
+		max-width: 1300px;
 		margin: 30px 0;
 		scroll-margin-top: 140px;
 
 		.servicios-title {
 			font-size: 40px;
-			margin-bottom: 0;
+			margin-bottom: 20px;
 			color: #5a5a5a;
 
 			@media (max-width: 768px) {

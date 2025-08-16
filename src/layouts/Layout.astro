@@ -8,26 +8,28 @@ import Header from '../components/Header.astro';
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		
 		<!-- SEO Meta Tags -->
-		<title>Bubo | Manicura y Uñas Profesionales en Madrid, Cundinamarca</title>
-		<meta name="description" content="Servicio profesional de manicura y uñas en Madrid, Cundinamarca. Especialistas en uñas acrílicas, poligel, semipermanentes, pedicura y pestañas. Técnica en seco, higiénica y segura. ¡Agenda tu cita!" />
-		<meta name="keywords" content="manicura madrid cundinamarca, uñas acrílicas, uñas poligel, uñas semipermanentes, pedicura, pestañas, salon de uñas, bubo, manicura en seco, uñas press on" />
-		<meta name="author" content="Bubo" />
+		<title>Manicura y Uñas en Madrid, Cundinamarca | bubo</title>
+		<meta name="description" content="bubo: salón de manicura en Madrid, Cundinamarca. Uñas acrílicas y poligel ($90.000), semipermanente ($35.000), pedicura ($25.000–$35.000), press on, mantenimiento y más. Técnica en seco, higiénica y segura. Agenda por WhatsApp 318 516 4144." />
+		<meta name="keywords" content="manicura madrid cundinamarca, uñas madrid cundinamarca, uñas acrílicas madrid, uñas poligel madrid, semipermanente madrid, pedicura madrid, salon de uñas madrid, manicure en seco, uñas press on madrid, mantenimiento uñas" />
+		<meta name="author" content="bubo" />
 		<meta name="robots" content="index, follow" />
 		<meta name="language" content="Spanish" />
+		<link rel="alternate" href="https://bubo.plus/" hreflang="es-co" />
+		<meta property="og:locale" content="es_CO" />
 
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://bubo.plus/" />
-		<meta property="og:title" content="Bubo | Manicura Profesional en Madrid" />
-		<meta property="og:description" content="Servicio profesional de manicura y uñas en Madrid, Cundinamarca. Especialistas en uñas acrílicas, poligel y semipermanentes. ¡Agenda tu cita!" />
-		<meta property="og:image" content="/og-image.jpg" />
+		<meta property="og:title" content="Manicura y Uñas en Madrid, Cundinamarca | bubo" />
+		<meta property="og:description" content="Uñas acrílicas y poligel ($90.000), semipermanente ($35.000), pedicura y mantenimiento en Madrid, Cundinamarca. Técnica en seco. Agenda tu cita." />
+		<meta property="og:image" content="/web-app-manifest-512x512.png" />
 
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
 		<meta property="twitter:url" content="https://bubo.plus/" />
-		<meta property="twitter:title" content="Bubo | Manicura Profesional en Madrid" />
-		<meta property="twitter:description" content="Servicio profesional de manicura y uñas en Madrid, Cundinamarca. Especialistas en uñas acrílicas, poligel y semipermanentes." />
-		<meta property="twitter:image" content="/og-image.jpg" />
+		<meta property="twitter:title" content="Manicura y Uñas en Madrid, Cundinamarca | bubo" />
+		<meta property="twitter:description" content="Uñas acrílicas, poligel, semipermanente y pedicura en Madrid, Cundinamarca. Técnica en seco. Agenda tu cita." />
+		<meta property="twitter:image" content="/web-app-manifest-512x512.png" />
 
 		<!-- Geo Tags -->
 		<meta name="geo.region" content="CO-CUN" />
@@ -48,6 +50,82 @@ import Header from '../components/Header.astro';
 
 		<!-- Canonical URL -->
 		<link rel="canonical" href="https://bubo.plus/" />
+
+		<!-- Theme Color -->
+		<meta name="theme-color" content="#287233" />
+
+		<!-- JSON-LD LocalBusiness -->
+		<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "NailSalon",
+		  "name": "bubo",
+		  "url": "https://bubo.plus/",
+		  "description": "bubo es un salón de manicuristas en Madrid, Cundinamarca, especializado en manicure, pedicure, uñas semipermanentes y cuidado profesional de manos. Atención con productos de calidad y precios justos asi como ventas de productos para manicuristas.",
+		  "image": ["https://bubo.plus/web-app-manifest-512x512.png"],
+		  "telephone": "+57 318 516 4144",
+		  "address": {
+		    "@type": "PostalAddress",
+		    "streetAddress": "Carrera 21 # 1-70",
+		    "addressLocality": "Madrid",
+		    "addressRegion": "Cundinamarca",
+		    "postalCode": "250030",
+		    "addressCountry": "CO"
+		  },
+		  "geo": {
+		    "@type": "GeoCoordinates",
+		    "latitude": 4.7323328865432,
+		    "longitude": -74.27741445511796
+		  },
+		  "openingHoursSpecification": [
+			{
+			"@type": "OpeningHoursSpecification",
+			"dayOfWeek": [
+				"Monday",
+				"Tuesday",
+				"Wednesday",
+				"Thursday",
+				"Friday",
+				"Saturday",
+				"Sunday"
+			],
+			"opens": "10:00",
+			"closes": "20:00"
+			}
+		],
+		"priceRange": "$$",
+		"areaServed": [
+			{
+			"@type": "Place",
+			"name": "Madrid"
+			},
+			{
+			"@type": "Place",
+			"name": "Funza"
+			},
+			{
+			"@type": "Place",
+			"name": "Mosquera"
+			}
+		],
+		 "makesOffer": [
+			{"@type":"Offer","priceCurrency":"COP","price":90000, "itemOffered":{"@type":"Service","name":"Uñas Poligel","description":"Técnica de esculpido con Poligel."}},
+			{"@type":"Offer","priceCurrency":"COP","price":90000, "itemOffered":{"@type":"Service","name":"Uñas Acrílicas","description":"Extensiones de uñas con acrílico."}},
+			{"@type":"Offer","priceCurrency":"COP","price":70000, "itemOffered":{"@type":"Service","name":"Mantenimiento Acrílicas","description":"Retoque y mantenimiento de acrílicas."}},
+			{"@type":"Offer","priceCurrency":"COP","price":70000, "itemOffered":{"@type":"Service","name":"Mantenimiento Poligel","description":"Retoque y mantenimiento de poligel."}},
+			{"@type":"Offer","priceCurrency":"COP","price":70000, "itemOffered":{"@type":"Service","name":"Uñas PressOn","description":"Press on personalizadas."}},
+			{"@type":"Offer","priceCurrency":"COP","price":50000, "itemOffered":{"@type":"Service","name":"Mantenimiento PressOn","description":"Retoque de press on."}},
+			{"@type":"Offer","priceCurrency":"COP","price":50000, "itemOffered":{"@type":"Service","name":"Dipping","description":"Baño de acrílico o poligel con semipermanente."}},
+			{"@type":"Offer","priceCurrency":"COP","price":35000, "itemOffered":{"@type":"Service","name":"Uñas Semipermanente","description":"Esmaltado de larga duración."}},
+			{"@type":"Offer","priceCurrency":"COP","price":18000, "itemOffered":{"@type":"Service","name":"Uñas Tradicionales","description":"Manicura clásica."}},
+			{"@type":"Offer","priceCurrency":"COP","price":25000, "itemOffered":{"@type":"Service","name":"Pedicura Tradicional","description":"Pedicura completa."}},
+			{"@type":"Offer","priceCurrency":"COP","price":35000, "itemOffered":{"@type":"Service","name":"Pedicura Semipermanente","description":"Pedicura con semipermanente."}}
+		],
+		"sameAs": [
+			"https://www.instagram.com/bubo.plus/",
+		]
+		}
+		</script>
 	</head>
 	<body>
 		<Header />
